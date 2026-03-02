@@ -143,6 +143,18 @@ keycloak:
   realm: master
 
 # ------------------------------------------------------------------
+#  Kagenti Webhook Configuration
+# ------------------------------------------------------------------
+# Override webhook image with port exclusion annotation support
+# (kagenti.io/outbound-ports-exclude, kagenti.io/inbound-ports-exclude).
+# Source: github.com/sallyom/kagenti-extensions branch update-for-ports
+# TODO: Remove override once merged upstream
+kagenti-webhook-chart:
+  image:
+    repository: quay.io/sallyom/kagenti-webhook
+    tag: latest
+
+# ------------------------------------------------------------------
 #  Kagenti Operator Configuration
 # ------------------------------------------------------------------
 kagenti-operator-chart:
